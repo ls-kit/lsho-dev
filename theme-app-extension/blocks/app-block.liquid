@@ -1,0 +1,25 @@
+<hr>
+<div id="section-cta">
+  <h3> {{ block.settings.text-box }} </h3>
+  <button onclick="myFunction()" class="wishlist-button active" data-customer="{{ customer.id }}" data-product="{{ product.id }}">Add To Wishlist</button>
+</div>
+<hr>
+
+
+{% schema %}
+  {
+    "name": "Add to wishlist button",
+    "target": "section",
+    "stylesheet": "wishlist-button.css",
+    "javascript": "wishlist.js",
+    "templates": ["product", "index"],
+    "settings": [
+      {
+        "id": "text-box",
+        "type": "text",
+        "label": "Heading",
+        "default": "Title"
+      }
+    ]
+  }
+{% endschema %}
